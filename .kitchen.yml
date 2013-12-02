@@ -15,3 +15,9 @@ suites:
     run_list:
       - recipe[git::default]
     attributes:
+  - name: server
+    run_list:
+      - recipe[git::server]
+    attributes:
+    excludes:
+      - centos-6.4
